@@ -1,0 +1,72 @@
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20rem;
+}
+.composition__photo {
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  transition: all 0.2s;
+  outline-offset: 2rem;
+}
+.text-feature h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.text-feature p {
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+.btn-text {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s;
+}
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.image-feature {
+  position: relative;
+}
+.image-feature .composition__photo {
+  position: absolute;
+  transition: all 0.2s;
+  outline-offset: 2rem;
+}
+.image-feature .composition__photo1 {
+  left: 0;
+  top: -2rem;
+  z-index: 1;
+}
+.image-feature .composition__photo2 {
+  right: 0;
+  top: 2rem;
+  z-index: 2;
+}
+.image-feature .composition__photo3 {
+  left: 20%;
+  top: 10rem;
+  z-index: 3;
+}
+.image-feature .composition__photo1:hover,
+.image-feature .composition__photo2:hover,
+.image-feature .composition__photo3:hover {
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  outline: 1.5rem solid #55c57a;
+}
+.image-feature .composition__photo:hover ~ .composition__photo {
+  scale: 0.9;
+}

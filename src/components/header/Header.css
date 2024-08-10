@@ -1,0 +1,105 @@
+.header {
+  background-image: url(../../assets/hero.jpg);
+  height: 95vh;
+  background-size: cover;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(
+    to right  bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(40, 180, 133, 0.8)
+  );
+}
+.header .logo {
+  position: absolute;
+  left: 4rem;
+  top: 4rem;
+  z-index: 2;
+}
+.header .logo img {
+  height: 3.5rem;
+}
+.header .text_header {
+  position: relative;
+  z-index: 2;
+}
+.header .text_header h1 {
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-white);
+  animation-name: moveLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  margin-bottom: 15px;
+}
+.header .text_header p {
+  display: block;
+  letter-spacing: 1.75rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  animation-name: moveRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@media (max-width: 425px){
+  .header .text_header h1 {
+    font-size: 2.7rem !important;
+    letter-spacing: 1.3rem !important;
+  }
+  .header .text_header p {
+    font-size: 1.3rem !important;
+    letter-spacing: 1.1rem !important;
+  }
+}
+@media (max-width: 768px){
+  .header .text_header h1 {
+    font-size: 4rem;
+    letter-spacing: 1.3rem;
+    margin-bottom: 15px;
+  }
+  .header .text_header p {
+    font-size: 1.5rem;
+    letter-spacing: 1.2rem;
+  }
+}
